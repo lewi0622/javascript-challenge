@@ -3,7 +3,7 @@ function decodeHtml(html) {
     var txt = document.createElement("textarea");
     txt.innerHTML = html;
     return txt.value;
-}
+};
 
 // build table for each data
 function buildTable(filteredData){
@@ -23,14 +23,20 @@ function buildTable(filteredData){
             cell.text(decodeHtml(value));
         });
     });
-}
+};
 
 // from data.js
 var tableData = data;
 
 // default table
-buildTable(tableData)
+buildTable(tableData);
 
+// select button
+var button = d3.select("#filter-btn");
 
-// create event handler for button click/filter
+// event handler for button
+button.on("click", runEnter);
 
+function runEnter(){
+
+};
